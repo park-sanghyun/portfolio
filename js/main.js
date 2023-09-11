@@ -55,8 +55,6 @@
     var $visual_length = $visualList.length;
     var _visualNum = 0;
     var _visualIn = 0;
-    var setT = 0;
-    var bool = true;
 
     function autoVisual(){
         _visualIn = setInterval(function(){
@@ -74,17 +72,11 @@
         $visualList.removeClass("on");
         $main_visual_wrap.eq(targets).addClass("on");
         $visualList.eq(targets).addClass("on");
-        $(".thum li").removeClass("on").eq(targets).addClass("on");
-        $(".thum2 li").removeClass("on").eq(targets).addClass("on");
-        $(".thum_wrap em").text(targets+1);
     }
 
-    
     $(".main_container .main_slider .slide_box > div").eq(0).addClass("on");
     
-    setTimeout(function() { 
-        $('.container').addClass('on');
-    }, 1000);
+    setTimeout(function() { $('.container').addClass('on');}, 1000);
 
 
     // sec2 글씨 쪼개기
