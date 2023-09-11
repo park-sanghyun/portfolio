@@ -141,7 +141,7 @@ div.portfolio_list {display: block; text-align: center;}
 #contact-wrap > div.active div {opacity: 1;}
 #contact-wrap > div::before {content: ''; position: absolute; left: 0; top: 0; background-color: #5f7dcd; border-radius: 6px; opacity: 0; width: 0%; height: 100%; transition: .5s; }
 #contact-wrap > div.active::before {opacity: 1; width: 100%;}
-#contact-wrap .title-box {padding: 100px 10vw 120px;}
+#contact-wrap .title-box {padding: 100px 6vw 120px;}
 #contact-wrap .title-box h2 {line-height: 1.2;}
 #contact-wrap .title-box h2 div {font-weight: bold; font-size: 120px;}
 #contact-wrap .title-box h2 div:first-child {color: #fff;}
