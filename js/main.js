@@ -58,14 +58,14 @@
 
     function autoVisual(){
         _visualIn = setInterval(function(){
-        if( _visualNum > $visual_length - 2 ){
-            _visualNum = 0;
-        }else{
-            _visualNum ++;
-        }
+            if( _visualNum > $visual_length - 2 ){
+                _visualNum = 0;
+            }else{
+                _visualNum ++;
+            }
             fadeEvent( _visualNum )
-            } , 3000 )
-        }
+        } , 3000 )
+    }
     autoVisual()
 
     function fadeEvent( targets ){
