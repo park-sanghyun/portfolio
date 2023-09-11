@@ -34,8 +34,8 @@
 }
 .about-slider .slide_box > div.on .box_img {transform: translate(-50%,-50%) perspective(100px) rotate(0.001deg) scale(1.0);}
 
-.box_img.s1 {background-image: url(/images/aboutimg-1.jpg);}
-.box_img.s2 {background-image: url(/images/aboutimg-2.jpg);}
+.box_img.s1 {background-image: url(./images/aboutimg-1.jpg);}
+.box_img.s2 {background-image: url(./images/aboutimg-2.jpg);}
 
 
 .aboutbox-wrap .right {width: 60%; margin-left: 80px;}
