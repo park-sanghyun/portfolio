@@ -39,13 +39,15 @@
         if( offsetTop > contactwrap / 1.15){
             let tl = gsap.timeline();
             tl.to("#contact-wrap .title-box h2 div span",{opacity: 1, x:0, stagger: 0.05, duration: 0.4}, "-=0.2")
-            tl.to("#contact-wrap .info-left",{opacity: 1, x:0, stagger: 0.05, duration: 0.5}, "-=0.2")
-            tl.to("#contact-wrap .info-right",{opacity: 1, x:50, stagger: 0.05, duration: 0.5}, "-=0.2")
+            tl.to("#contact-wrap .info-left",{opacity: 1, x:0, stagger: 0.005, duration: 0.5}, "-=0.1")
+            tl.to("#contact-wrap .info-right",{opacity: 1, x:50, stagger: 0.005, duration: 0.5}, "-=0.1")
+            $("#contact-wrap > div").addClass("active");
         } else {
             let tl = gsap.timeline();
             tl.to("#contact-wrap .title-box h2 div span",{opacity: 0, x:0, stagger: 0.05, duration: 0.4}, "-=0.2")
             tl.to("#contact-wrap .info-left",{opacity: 0, x:50, stagger: 0.05, duration: 0.5}, "-=0.2")
             tl.to("#contact-wrap .info-right",{opacity: 0, x:0, stagger: 0.05, duration: 0.5}, "-=0.2")
+            $("#contact-wrap > div").removeClass("active");
         }
 
     })
@@ -64,7 +66,7 @@
                 _visualNum ++;
             }
             fadeEvent( _visualNum )
-        } , 3000 )
+        } , 2000 )
     }
     autoVisual()
 
@@ -76,7 +78,7 @@
 
     $(".main_container .main_slider .slide_box > div").eq(0).addClass("on");
     
-    setTimeout(function() { $('.container').addClass('on');}, 1000);
+    // setTimeout(function() { $('.container').addClass('on');}, 1000);
 
 
     // sec2 글씨 쪼개기
