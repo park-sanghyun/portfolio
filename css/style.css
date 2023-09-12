@@ -37,3 +37,4 @@
 .footerwrap {text-align: center; padding: 16px 0px;}
 
 .footerwrap p {font-size: 14px; color: #717171; font-family: 'Montserrat';}
+.footerwrap p:first-child {padding-bottom: 8px;}
