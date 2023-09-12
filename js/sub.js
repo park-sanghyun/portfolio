@@ -2,7 +2,7 @@
 
     $(document).ready(function(){
 
-        if(window.location.pathname == '/portfolio.html'){
+        if(window.location.pathname == './portfolio.html'){
             console.log(1);
             let tl = gsap.timeline();
             tl.to(".title-box h2 div span",{opacity: 1, x:0, stagger: 0.05, duration: 0.4}, "-=0.2")
