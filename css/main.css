@@ -61,7 +61,7 @@
 /* portfolio */
 #portfolio-wrap {width: 100%; height: 100%; position: relative;}
 .title-box {padding: 150px 0 50px;}
-.title-box h2 { font-size: 54px; line-height: 1.4; color: #000;}
+.title-box h2 { font-size: 54px; line-height: 1.4; color: #515151;}
 .title-box h2 div { display: block;}
 .title-box h2 div span { display: inline-block; min-width: 20px; font-weight: bold; opacity: 0; transform: translate(50px, 0);}
 .title-box p { font-size: 18px; line-height: 1.7; opacity: 0; transform: translate(0, 10px);}
@@ -129,7 +129,7 @@
 .portfolio_item .tit-box {margin: 10px 0; transform: translateY(50px); transition: .6s .5s; opacity: 0;}
 .portfolio_item.show .tit-box {transform: translateY(0px); opacity: 1;}
 
-.portfolio_item .tit-box .project-title {font-size: 36px; font-weight: bold; letter-spacing: .02em; line-height: 70px;}
+.portfolio_item .tit-box .project-title {font-size: 36px; font-weight: bold; color: #484848; letter-spacing: .02em; line-height: 70px;}
 .portfolio_item .tit-box .project-type {line-height: 30px;}
 
 div.portfolio_list {display: block; text-align: center;}

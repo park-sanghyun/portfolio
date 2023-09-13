@@ -18,8 +18,7 @@
 
 .mo_btn_wrap {z-index: 1;}
 .mo_btn { width: 30px; height: 40px; box-sizing: border-box; padding-top: 2px; background: transparent; }
-.mo_btn span { display: block; width: 30px; height: 4px; background-color: #000; margin: 0 auto; margin-bottom: 5px; -webkit-transition: all 0.3s; transition: all 0.3s; }
-
+.mo_btn span { display: block; width: 30px; height: 4px; background-color: #7e9ae3; margin: 0 auto; margin-bottom: 5px; -webkit-transition: all 0.3s; transition: all 0.3s; }
 .mo_btn.act span { background-color: #F4F7FF; }
 .mo_btn.act .line1 { -webkit-transform: translateY(8px) translateX(-3px) rotate(45deg); transform: translateY(8px) translateX(-3px) rotate(45deg);} 
 .mo_btn.act .line2 {opacity: 0;} 
@@ -27,19 +26,29 @@
 
 #gnb { display: block; position: fixed; left: 0; top: -100%; width: 100%; height: 100vh; background: #5f7dcd; transition: .4s ease-in; opacity: 0;}
 #gnb.ani { top: 0px; opacity: 1; }
+#gnb.ani .list .list_ho {transform: translatey(0px); opacity: 1;}
 #gnb .list {position: relative; width: 90%; height: 100%; margin: 0 auto; display: flex; align-items: center; justify-content: center; flex-direction: column; z-index: 10;}
 #gnb .list .list_ho { line-height: 1.5; padding: 10px 0; transform: translatey(30px); transition: .4s; opacity: 0;}
-#gnb .list .list_ho a { display: block; width: 100%; height: 100%; font-size: 5vw; color: #F4F7FF; font-weight: bold; font-style: normal; transition: .5s;}
-#gnb .list .list_ho a:hover {color: #000;}
-#gnb.ani .list .list_ho {transform: translatey(0px); opacity: 1;}
+#gnb .list .list_ho a { position: relative; overflow: hidden; display: block; width: 100%; height: 100%; font-size: 5vw; color: #F4F7FF; font-weight: bold; font-style: normal; transition: .5s;}
+#gnb .list .list_ho a .text-bg { position: absolute; left: 0; overflow: hidden; background-color: transparent; width: 100%; display: block; transform: translate3d(-100%,0,0); animation: anim-out-layer .3s ease-out; -webkit-backface-visibility: hidden; backface-visibility: hidden;}
+#gnb .list .list_ho a .text-bg::before { background-color: transparent; content: attr(data-text); width: 100%; display: block; font-size: 4.9vw; transform: translate3d(100%,0,0); color: #7ab5ff; animation: anim-out-text .3s ease-out; -webkit-backface-visibility: hidden; backface-visibility: hidden;}
+#gnb .list .list_ho a:hover .text-bg {animation: anim-in-layer .3s ease forwards;}
+#gnb .list .list_ho a:hover .text-bg::before {animation: anim-in-text .3s ease forwards;}
+#gnb .list .list_ho.actives a .text-bg {animation: anim-in-layer .3s ease forwards;}
+#gnb .list .list_ho.actives a .text-bg::before {animation: anim-in-text .3s ease forwards;}
 #gnb .list .list_ho:nth-child(1) {transition-delay: 0.4s;}
 #gnb .list .list_ho:nth-child(2) {transition-delay: 0.5s;}
 #gnb .list .list_ho:nth-child(3) {transition-delay: 0.6s;}
 #gnb .list .list_ho:nth-child(4) {transition-delay: 0.7s;}
 
+@keyframes anim-out-text{0%{transform:translateZ(0)}to{transform:translate3d(-100%,0,0)}}
+@keyframes anim-out-layer{0%{transform:translateZ(0)}to{transform:translate3d(100%,0,0)}}
+@keyframes anim-in-layer{0%{transform:translate3d(-100%,0,0)}to{transform:translateZ(0)}}
+@keyframes anim-in-text{0%{transform:translate3d(100%,0,0)}to{transform:translateZ(0)}}
+
 .case-study-num { position: absolute; top: 0; left: 0; width: 100%; height: 100%; margin:0; z-index:2;}	
 .case-study-num li { position: absolute; width: 100%; height: 100%; top: 0; left: 0; overflow: hidden; list-style:none; transition: all 300ms linear; -webkit-transition: all 300ms linear;}	
-.case-study-num li .hero-number-back{ position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); display: block; list-style:none; opacity: 0; font-size: 45vw; line-height: 1; color: transparent; -webkit-text-stroke: 3px rgba(0,0,0,.2); z-index: 1; transition: all 300ms linear; -webkit-transition: all 300ms linear; font-family: 'Sunflower', sans-serif;} 
+.case-study-num li .hero-number-back{ position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); display: block; list-style:none; opacity: 0; font-size: 45vw; line-height: 1; color: transparent; -webkit-text-stroke: 3px rgba(255, 255, 255, 0.2); z-index: 1; transition: all 300ms linear; -webkit-transition: all 300ms linear; font-family: 'Sunflower', sans-serif;} 
 .case-study-num li .hero-number{ position: absolute; bottom: 25px; left: 50%; width: 40px; margin-left: -70px; display: block; letter-spacing: 2px; text-align: center; list-style:none; opacity: 0; font-size: 13px; font-weight: 300; line-height: 1; color: #fff; z-index: 6; transform: translateY(100%); -webkit-transform: translateY(100%); transition: all 300ms linear; -webkit-transition: all 300ms linear;} 
 .case-study-num li .hero-number-fixed{ position: absolute; bottom: 25px; left: 50%; margin-left: 30px; width: 40px; text-align: center; display: block; letter-spacing: 2px; list-style:none; font-size: 13px; font-weight: 300; line-height: 1; color: #fff; z-index: 6; -webkit-transition: all 300ms linear; transition: all 300ms linear; }
 .case-study-num li .hero-number-fixed:before{ position: absolute; content: ''; top: 50%; left: -60px; width: 60px; height: 1px; z-index: 1; background-color: rgba(255,255,255,.4); -webkit-transition: all 300ms linear; transition: all 300ms linear; }
