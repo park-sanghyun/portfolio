@@ -6,12 +6,16 @@
         $(this).toggleClass("act");
 
         if ($(this).hasClass("act")) {
+            mouseenter_target();
             btn_start()
         } else {
             btn_reset();
         }
 
         $("#gnb .list .list_ho a").click(function (e) {
+            $index = $(".list_ho a").index(this);
+            console.log($index);
+            $(".list_ho").off('mouseenter');
             btn_reset();
         })
     })
@@ -35,14 +39,17 @@
 
 
     // menu btn ani
-    $(".list_ho").on('mouseenter', function() {
-        $index = $(".list_ho").index(this);
+    function mouseenter_target(){
+        $(".list_ho").on('mouseenter', function() {
+            $index = $(".list_ho").index(this);
+            console.log($index+1);
 
-        $(".list_ho.actives").removeClass("actives");
-        $(".case-study-num li.show").removeClass("show");
-        $(".list_ho:nth-child("+($index+1)+")").addClass("actives");
-        $(".case-study-num li:nth-child("+($index+1)+")").addClass("show");
-    })
+            $(".list_ho.actives").removeClass("actives");
+            $(".case-study-num li.show").removeClass("show");
+            $(".list_ho:nth-child("+($index+1)+")").addClass("actives");
+            $(".case-study-num li:nth-child("+($index+1)+")").addClass("show");
+        })
+    }
     
 
     gsap.to('.title-bg',{
