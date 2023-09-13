@@ -18,7 +18,7 @@
 
 .mo_btn_wrap {z-index: 1;}
 .mo_btn { width: 30px; height: 40px; box-sizing: border-box; padding-top: 2px; background: transparent; }
-.mo_btn span { display: block; width: 30px; height: 4px; background-color: #7e9ae3; margin: 0 auto; margin-bottom: 5px; -webkit-transition: all 0.3s; transition: all 0.3s; }
+.mo_btn span { display: block; width: 30px; height: 4px; background-color: #515151; margin: 0 auto; margin-bottom: 5px; -webkit-transition: all 0.3s; transition: all 0.3s; }
 .mo_btn.act span { background-color: #F4F7FF; }
 .mo_btn.act .line1 { -webkit-transform: translateY(8px) translateX(-3px) rotate(45deg); transform: translateY(8px) translateX(-3px) rotate(45deg);} 
 .mo_btn.act .line2 {opacity: 0;} 
@@ -31,7 +31,7 @@
 #gnb .list .list_ho { line-height: 1.5; padding: 10px 0; transform: translatey(30px); transition: .4s; opacity: 0;}
 #gnb .list .list_ho a { position: relative; overflow: hidden; display: block; width: 100%; height: 100%; font-size: 5vw; color: #F4F7FF; font-weight: bold; font-style: normal; transition: .5s;}
 #gnb .list .list_ho a .text-bg { position: absolute; left: 0; overflow: hidden; background-color: transparent; width: 100%; display: block; transform: translate3d(-100%,0,0); animation: anim-out-layer .3s ease-out; -webkit-backface-visibility: hidden; backface-visibility: hidden;}
-#gnb .list .list_ho a .text-bg::before { background-color: transparent; content: attr(data-text); width: 100%; display: block; font-size: 4.9vw; transform: translate3d(100%,0,0); color: #7ab5ff; animation: anim-out-text .3s ease-out; -webkit-backface-visibility: hidden; backface-visibility: hidden;}
+#gnb .list .list_ho a .text-bg::before { background-color: transparent; content: attr(data-text); width: 100%; display: block; font-size: 4.9vw; transform: translate3d(100%,0,0); color: #cec3f7; animation: anim-out-text .3s ease-out; -webkit-backface-visibility: hidden; backface-visibility: hidden;}
 #gnb .list .list_ho a:hover .text-bg {animation: anim-in-layer .3s ease forwards;}
 #gnb .list .list_ho a:hover .text-bg::before {animation: anim-in-text .3s ease forwards;}
 #gnb .list .list_ho.actives a .text-bg {animation: anim-in-layer .3s ease forwards;}
