@@ -66,3 +66,15 @@
 @media all and (max-width: 1440px) {
     .container {max-width: 95%;}
 }
+
+@media all and (max-width: 1024px) {
+    
+}
+
+@media all and (max-width: 768px) {
+    
+}
+
+@media all and (max-width: 479px) {
+    
+}
