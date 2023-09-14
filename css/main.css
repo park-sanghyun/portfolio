@@ -280,10 +280,12 @@ div.portfolio_list {display: block; text-align: center;}
     #contact-wrap {height: calc(100vh - 71px)}
     #contact-wrap .title-box {max-width: 95%; margin: 0 auto; padding: 50px 0;}
     #contact-wrap .title-box h2 {font-size: 20px;}
+    #contact-wrap .title-box h2 div span {min-width: 10px;}
     .info-left .lbox-1 {padding: 0 0 30px;}
     .info-left .lbox-1 a {font-size: 24px;}
     .info-left .lbox-1 p {font-size: 16px;}
     .info-left .lbox-2 p {font-size: 14px;}
+
 }
 @media all and (max-width: 375px) {
     .title-box h2 {font-size: 30px;}
