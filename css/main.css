@@ -274,6 +274,7 @@ div.portfolio_list {display: block; text-align: center;}
     .aboutbox-wrap .right .contents-box .tit p:last-child {font-size: 26px;}
     .aboutbox-wrap .right .contents-box .txt-box,
     .aboutbox-wrap .right .contents-box .contbox p {font-size: 16px;}
+    .aboutbox-wrap .right .contents-box:nth-child(2) .contbox:first-child {padding-bottom: 20px;}
 
     .portfolio_item .tit-box .project-title {font-size: 28px;}
 
