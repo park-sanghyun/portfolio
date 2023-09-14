@@ -86,6 +86,8 @@
 
 @media all and (max-width: 479px) {
 
+    .mo_btn span {height: 3px;}
+    .mo_btn.act .line3 {-webkit-transform: translateY(-8px) translateX(-3px) rotate(-45deg); transform: translateY(-8px) translateX(-3px) rotate(-45deg);}
     
     .footerwrap p {font-size: 12px;}
 
