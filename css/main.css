@@ -266,7 +266,7 @@ div.portfolio_list {display: block; text-align: center;}
 @media all and (max-width: 479px) {
     .subtit {font-size: 16px;}
     .title-box {padding: 110px 0 40px;}
-    .title-box h2 {font-size: 40px;}
+    .title-box h2 {font-size: 36px;}
     .title-box h2 div span {min-width: 15px;}
 
     .aboutbox-wrap .left {width: 100%;}
