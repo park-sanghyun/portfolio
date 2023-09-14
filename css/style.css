@@ -64,6 +64,11 @@
 
 /*media query*/
 @media all and (max-width: 1440px) {
+
+    #header_Wrap.scroll {background-color: #5f7dcd;}
+    #header_Wrap.scroll .mo_btn span {background: #fff;}
+
+    .headerwrap {padding: 15px 0px; max-width: 95%;}
     .container {max-width: 95%;}
 }
 
@@ -72,9 +77,20 @@
 }
 
 @media all and (max-width: 768px) {
-    
+
+    #gnb .list .list_ho a {font-size: 38px;}
+    #gnb .list .list_ho a .text-bg::before {font-size: 37px;}
+
+    .case-study-num li .hero-number-back {font-size: 345.6px;}
 }
 
 @media all and (max-width: 479px) {
+
     
+    .footerwrap p {font-size: 12px;}
+
+    #gnb .list .list_ho a {font-size: 30px;}
+    #gnb .list .list_ho a .text-bg::before {font-size: 29px;}
+
+    .case-study-num li .hero-number-back {font-size: 300px;}
 }

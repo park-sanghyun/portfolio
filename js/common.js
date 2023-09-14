@@ -20,6 +20,18 @@
         })
     })
 
+    $(document).scroll(function(){
+        var offsetTop = $(window).scrollTop();
+        var introwrapH = $("#intro-wrap").height();
+
+        if(offsetTop > introwrapH){
+            $("#header_Wrap").addClass("scroll")
+        } else {
+            $("#header_Wrap").removeClass("scroll")
+        }
+
+    })
+
     // btn open
     function btn_start(){
         $(".mo_btn").addClass("act");
