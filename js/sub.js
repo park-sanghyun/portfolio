@@ -46,25 +46,10 @@
 
 window.addEventListener('DOMContentLoaded', function () {
 
-    const featureItems = document.querySelectorAll('.aboutbox-wrap .right .contents-box')
     const projectItems = document.querySelectorAll('.project-area .portfolio_list .portfolio_item')
     let itemsTop;
     let itemsHeight;
     let aniStartHeight;
-
-    function scrollItems() {
-        for (let i = 0; i < featureItems.length; i++) {
-            aniStartHeight = window.innerHeight;
-            itemsTop = featureItems[i].getBoundingClientRect().top;
-            itemsHeight = featureItems[i].getBoundingClientRect().height;
-
-            if (itemsTop < aniStartHeight && itemsHeight + itemsTop > aniStartHeight) {
-                featureItems[i].classList.add('active')
-            } else {
-                featureItems[i].classList.remove('active')
-            }
-        }
-    }
     
     function scroll_projectItems() {
         for (let i = 0; i < projectItems.length; i++) {
@@ -81,11 +66,9 @@ window.addEventListener('DOMContentLoaded', function () {
     }
 
     function init() {
-        window.addEventListener('scroll', scrollItems);
         window.addEventListener('scroll', scroll_projectItems);
     }
-
-    scrollItems();
+    
     scroll_projectItems();
     init();
 })

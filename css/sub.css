@@ -14,7 +14,7 @@
 
 .portfolio_list {display: flex; max-width: 1400px; flex-direction: row; flex-wrap: wrap; margin: 0 auto; position: relative; height: 100%;}
 
-.portfolio_item {flex-grow: 0; margin: 10px; display: inline-block; width: 330px; height: 250px; overflow: hidden; vertical-align: top; position: relative; opacity: 0;}
+.portfolio_item {flex-grow: 0; margin: 10px; display: block; width: 330px; height: 250px; overflow: hidden; vertical-align: top; position: relative; opacity: 0;}
 .portfolio_item.act {display: inline-block;}
 .portfolio_item.show {opacity: 1;}
 .portfolio_item.noload {display: none;}
