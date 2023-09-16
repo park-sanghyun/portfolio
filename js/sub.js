@@ -3,11 +3,9 @@
     $(document).ready(function(){
 
         if(window.location.pathname == '/portfolio/portfolio.html'){
-            console.log(1);
             let tl = gsap.timeline();
             tl.to(".title-box h2 div span",{opacity: 1, x:0, stagger: 0.05, duration: 0.4}, "-=0.2")
             tl.to(".title-box p",{opacity: 1, y:0, duration: 0.4, stagger: 0.05})
-            $(".portfolio_item").addClass("act show");
         }
 
     })
@@ -53,7 +51,7 @@ window.addEventListener('DOMContentLoaded', function () {
     
     function scroll_projectItems() {
         for (let i = 0; i < projectItems.length; i++) {
-            aniStartHeight = window.innerHeight;
+            aniStartHeight = window.innerHeight / 1.2;
             itemsTop = projectItems[i].getBoundingClientRect().top;
             itemsHeight = projectItems[i].getBoundingClientRect().height;
 
@@ -68,7 +66,7 @@ window.addEventListener('DOMContentLoaded', function () {
     function init() {
         window.addEventListener('scroll', scroll_projectItems);
     }
-    
+
     scroll_projectItems();
     init();
 })
