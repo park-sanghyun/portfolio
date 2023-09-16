@@ -12,19 +12,22 @@
 
     })
 
-    var f1 = true;
     $(document).scroll(function(){
-
-        // videos list
-        if($('.project-area').offset().top - window.scrollY < window.innerHeight / 2  &&  f1 == true ){
-                
-            $(".portfolio_item").addClass("act show");
-        
-            f1 = false;
-        } 
-
+        var offsetTop = $(window).scrollTop();
+        var contactwrap = $("#contact-wrap").offset().top;
 
         // contact-wrap
+        if( offsetTop > contactwrap / 1.15){
+            let tl = gsap.timeline();
+            tl.to("#contact-wrap .title-box h2 div span",{opacity: 1, x:0, stagger: 0.05, duration: 0.4}, "-=0.2")
+            $("#contact-wrap .container").addClass("show");
+            $("#contact-wrap > div").addClass("active");
+        } else {
+            let tl = gsap.timeline();
+            tl.to("#contact-wrap .title-box h2 div span",{opacity: 0, x:0, stagger: 0.05, duration: 0.4}, "-=0.2")
+            $("#contact-wrap .container").removeClass("show");
+            $("#contact-wrap > div").removeClass("active");
+        }
 
     })
 
@@ -39,3 +42,50 @@
 
 
 }(jQuery));
+
+
+window.addEventListener('DOMContentLoaded', function () {
+
+    const featureItems = document.querySelectorAll('.aboutbox-wrap .right .contents-box')
+    const projectItems = document.querySelectorAll('.project-area .portfolio_list .portfolio_item')
+    let itemsTop;
+    let itemsHeight;
+    let aniStartHeight;
+
+    function scrollItems() {
+        for (let i = 0; i < featureItems.length; i++) {
+            aniStartHeight = window.innerHeight;
+            itemsTop = featureItems[i].getBoundingClientRect().top;
+            itemsHeight = featureItems[i].getBoundingClientRect().height;
+
+            if (itemsTop < aniStartHeight && itemsHeight + itemsTop > aniStartHeight) {
+                featureItems[i].classList.add('active')
+            } else {
+                featureItems[i].classList.remove('active')
+            }
+        }
+    }
+    
+    function scroll_projectItems() {
+        for (let i = 0; i < projectItems.length; i++) {
+            aniStartHeight = window.innerHeight;
+            itemsTop = projectItems[i].getBoundingClientRect().top;
+            itemsHeight = projectItems[i].getBoundingClientRect().height;
+
+            if (itemsTop < aniStartHeight) {
+                projectItems[i].classList.add('show')
+            } else {
+                projectItems[i].classList.remove('show')
+            }
+        }
+    }
+
+    function init() {
+        window.addEventListener('scroll', scrollItems);
+        window.addEventListener('scroll', scroll_projectItems);
+    }
+
+    scrollItems();
+    scroll_projectItems();
+    init();
+})

@@ -1,6 +1,5 @@
 (function ($) {
 
-    var f1 = true;
     $(document).scroll(function(){
         var offsetTop = $(window).scrollTop();
         var introwrap = $("#intro-wrap").height() / 5;
