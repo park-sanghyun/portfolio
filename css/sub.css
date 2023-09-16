@@ -12,9 +12,14 @@
 .project-area { display: flex; max-width: 1400px; flex-direction: row; flex-wrap: wrap; margin: 0 auto; position: relative; /*height: 100%;*/ min-height: 638px; }
 .project-area > p { font-size: 60px; font-weight: 600; line-height: 1; margin-bottom: 100px;}
 
-.portfolio_list {display: flex; gap: 10px; max-width: 1400px; flex-direction: row; flex-wrap: wrap; margin: 0 auto; position: relative; height: 100%;}
+.portfolio_list {display: flex;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px; max-width: 1400px; flex-direction: row; flex-wrap: wrap; margin: 0 auto; position: relative; height: 100%;}
 
-.portfolio_item {flex-grow: 0; display: block; width: 330px; height: 250px; overflow: hidden; vertical-align: top; position: relative; opacity: 0;}
+.portfolio_item {flex-grow: 0; display: block; width: 457px; height: 250px; padding-bottom: 80%; overflow: hidden; vertical-align: top; position: relative; opacity: 0;
+    border: 1px solid #999;
+}
 .portfolio_item.show {opacity: 1;}
 .portfolio_item.noload {display: none;}
 
@@ -24,14 +29,14 @@
 .portfolio_item:nth-child(2n)::before { top: auto; bottom: 0; width: 100%; height: 0%; }
 .portfolio_item:nth-child(2n).show::before {height: 100%;}
 
-.portfolio_item:nth-child(3n)::before { left: auto; right: 0; width: 0%; height: 100%;}
+/* .portfolio_item:nth-child(3n)::before { left: auto; right: 0; width: 0%; height: 100%;}
 .portfolio_item:nth-child(3n).show::before {width: 100%;}
 
 .portfolio_item:nth-child(4)::before { top: 0; width: 100%; height: 0%;}
 .portfolio_item:nth-child(4).show::before {height: 100%;}
 
 .portfolio_item:nth-child(4n)::before {width: 100%; height: 0%;}
-.portfolio_item:nth-child(4n).show::before {height: 100%;}
+.portfolio_item:nth-child(4n).show::before {height: 100%;} */
 
 .portfolio_item .item_frame { display: inline-block; width: 100%; height: 100%;  overflow: hidden; transition: transform .25s cubic-bezier(.215,.61,.355,1); z-index: 10;}
 
@@ -40,36 +45,31 @@
     animation: 320ms cubic-bezier(0.215, 0.61, 0.355, 1) .4s 1 normal both running slideInLeft;
 }
 
-.portfolio_item:nth-child(5n).show .item_frame .item_back { animation: 340ms cubic-bezier(0.215, 0.61, 0.355, 1) .4s 1 normal both running slideInDown;}
 .portfolio_item:nth-child(2n).show .item_frame .item_back { animation: 340ms cubic-bezier(0.215, 0.61, 0.355, 1) .4s 1 normal both running slideInDown;}
-.portfolio_item:nth-child(3n).show .item_frame .item_back { animation: 360ms cubic-bezier(0.215, 0.61, 0.355, 1) .4s 1 normal both running slideInUp;}
+/* .portfolio_item:nth-child(3n).show .item_frame .item_back { animation: 360ms cubic-bezier(0.215, 0.61, 0.355, 1) .4s 1 normal both running slideInUp;}
 .portfolio_item:nth-child(4).show .item_frame .item_back { animation: 400ms cubic-bezier(0.215, 0.61, 0.355, 1) .4s 1 normal both running slideInDown !important;}
 .portfolio_item:nth-child(4n).show .item_frame .item_back { animation: 420ms cubic-bezier(0.215, 0.61, 0.355, 1) .4s 1 normal both running slideInRight;}
+.portfolio_item:nth-child(5n).show .item_frame .item_back { animation: 340ms cubic-bezier(0.215, 0.61, 0.355, 1) .4s 1 normal both running slideInDown;} */
 
-.portfolio_item .item_frame .item_face { display: block; width: 100%;  height: 100%; overflow: hidden; transition: transform .25s cubic-bezier(.215,.61,.355,1); position: relative;}
+.portfolio_item .item_frame .item_face { display: block; width: 100%;  height: 100%; overflow: hidden; transition: transform .25s cubic-bezier(.215,.61,.355,1); position: absolute; left: 0; top: 0;}
 .portfolio_item.show .item_frame .item_face { visibility: visible !important;}
 .portfolio_item.show .item_frame .item_face .image_box { display: inline-block; position: absolute; top: 0; left: 0; overflow: hidden; z-index: 30; width: 100% !important;  height:100%; overflow:hidden; 
     animation: 400ms cubic-bezier(0.215, 0.61, 0.355, 1) .8s 1 normal both running slideInRight;
 }
 
-.portfolio_item:nth-child(5n).show .item_frame .item_face .image_box { animation: 340ms cubic-bezier(0.215, 0.61, 0.355, 1) .8s 1 normal both running slideInDown;}
 .portfolio_item:nth-child(2n).show .item_frame .item_face .image_box { animation: 340ms cubic-bezier(0.215, 0.61, 0.355, 1) .8s 1 normal both running slideInDown;}
-.portfolio_item:nth-child(3n).show .item_frame .item_face .image_box { animation: 360ms cubic-bezier(0.215, 0.61, 0.355, 1) .8s 1 normal both running slideInUp;}
+/* .portfolio_item:nth-child(3n).show .item_frame .item_face .image_box { animation: 360ms cubic-bezier(0.215, 0.61, 0.355, 1) .8s 1 normal both running slideInUp;}
 .portfolio_item:nth-child(4).show .item_frame .item_face .image_box { animation: 400ms cubic-bezier(0.215, 0.61, 0.355, 1) .8s 1 normal both running slideInDown !important;}
 .portfolio_item:nth-child(4n).show .item_frame .item_face .image_box { animation: 420ms cubic-bezier(0.215, 0.61, 0.355, 1) .8s 1 normal both running slideInRight;}
+.portfolio_item:nth-child(5n).show .item_frame .item_face .image_box { animation: 340ms cubic-bezier(0.215, 0.61, 0.355, 1) .8s 1 normal both running slideInDown;} */
 
-.portfolio_item.show .item_frame .item_face .image_box > div {
-    position: absolute;
-    left: 0; top: 0; width: 100%; height: 100%;
-}
-.portfolio_item.show .item_frame .item_face .image_box > div img {
-    width: 100%; height: 100%; object-fit: cover;
-}
+.portfolio_item.show .item_frame .item_face .image_box > div {position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
+.portfolio_item.show .item_frame .item_face .image_box > div img {width: 100%; height: 100%; object-fit: cover;}
+
 /* .portfolio_item .item_frame .item_face .image_box {height: 100%;} */
+.portfolio_item .item_frame .item_face .hover_box { cursor: pointer; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,.6); z-index: 40; display: flex; align-items: center; justify-content: center; opacity: 0; filter: blur(30px); transform: scale(1.1); transition: all .35s ease;} 
 .portfolio_item .item_frame .item_face .image_box img {width: 100%; display: block; height: 100%; object-fit: cover;}
 .portfolio_item .item_frame .item_face .image_box iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;}
-
-.portfolio_item .item_frame .item_face .hover_box { cursor: pointer; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,.6); z-index: 40; display: flex; align-items: center; justify-content: center; opacity: 0; filter: blur(30px); transform: scale(1.2); transition: all .35s ease;} 
 .portfolio_item .item_frame .item_face .hover_box strong { padding: 0 20px; text-align: center; color: #fff; font-size: 24px; font-weight: 500; word-break: keep-all; line-height: 1.5;}
 .portfolio_item .item_frame .item_face .hover_box:hover { opacity: 1; filter: blur(0); transform: scale(1); transition-delay: .21s;}
 
