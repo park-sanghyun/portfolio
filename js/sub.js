@@ -51,7 +51,7 @@ window.addEventListener('DOMContentLoaded', function () {
     
     function scroll_projectItems() {
         for (let i = 0; i < projectItems.length; i++) {
-            aniStartHeight = window.innerHeight / 1.2;
+            aniStartHeight = window.innerHeight / 1.1;
             itemsTop = projectItems[i].getBoundingClientRect().top;
             itemsHeight = projectItems[i].getBoundingClientRect().height;
 

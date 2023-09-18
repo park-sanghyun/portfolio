@@ -58,7 +58,7 @@
 
 div.portfolio_list {display: block; text-align: center;}
 
-.portfolio_item .tit-box {padding: 15px; transform: translateY(20px); transition: .6s .5s; opacity: 0;}
+.portfolio_item .tit-box {padding: 20px 15px; transform: translateY(20px); transition: .6s .5s; opacity: 0;}
 .portfolio_item.show .tit-box {transform: translateY(0px); opacity: 1;}
 
 .portfolio_item .tit-box .project-title {font-size: 24px; font-weight: bold; color: #484848; letter-spacing: .02em;}
