@@ -13,14 +13,9 @@
 .project-area { display: flex; max-width: 1400px; flex-direction: row; flex-wrap: wrap; margin: 0 auto; position: relative; /*height: 100%;*/ min-height: 638px; }
 .project-area > p { font-size: 60px; font-weight: 600; line-height: 1; margin-bottom: 100px;}
 
-.portfolio_list {display: flex;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 15px; max-width: 1400px; flex-direction: row; flex-wrap: wrap; margin: 0 auto; position: relative; height: 100%;}
+.portfolio_list {display: grid; grid-template-columns: repeat(3,1fr); gap: 15px; max-width: 1400px;  margin: 0 auto; position: relative; height: 100%;}
 
-.portfolio_item {flex-grow: 0; display: block; width: 457px; height: 100%; overflow: hidden; vertical-align: top; position: relative; opacity: 0;
-    border: 1px solid #ccc;
-}
+.portfolio_item {flex-grow: 0; display: block; width: 457px; height: 100%; overflow: hidden; vertical-align: top; position: relative; opacity: 0; border: 1px solid #ccc;}
 .portfolio_item.show {opacity: 1;}
 .portfolio_item.noload {display: none;}
 
@@ -64,6 +59,7 @@ div.portfolio_list {display: block; text-align: center;}
 
 .portfolio_item .tit-box .project-title {font-size: 24px; font-weight: bold; color: #484848; letter-spacing: .02em;}
 .portfolio_item .tit-box .project-type {line-height: 30px;}
+.portfolio_item .tit-box .project-type span {display: inline-block;}
 
 
 
@@ -101,6 +97,8 @@ div.portfolio_list {display: block; text-align: center;}
     #contact-wrap {padding: 70px 0px 0px; max-width: 100%; height: calc(100vh - 77px);}
     #contact-wrap > div::before {border-radius: 0;}
     #contact-wrap .title-box {padding: 70px 0;}
+
+    .portfolio_item {width: 100%;}
 }
 
 @media all and (max-width: 1024px) {
@@ -109,14 +107,20 @@ div.portfolio_list {display: block; text-align: center;}
 
 @media all and (max-width: 768px) {
 
+    .portfolio_list {grid-template-columns: repeat(2,1fr);}
+
     .info-left .lbox-1 > div {padding-bottom: 30px;}
     .info-left .lbox-1 a {font-size: 40px;}
+
 }
 
 @media all and (max-width: 479px) {
     .title-box {padding: 110px 0 40px;}
     .title-box h2 {font-size: 36px;}
     .title-box h2 div span {min-width: 15px;}
+
+    .title-box p {font-size: 18px;}
+    .portfolio_list {grid-template-columns: repeat(1,1fr); gap: 40px;}
 
     #contact-wrap {height: calc(100vh - 71px)}
     #contact-wrap .title-box {max-width: 95%; margin: 0 auto; padding: 50px 0;}
@@ -126,9 +130,14 @@ div.portfolio_list {display: block; text-align: center;}
     .info-left .lbox-1 a {font-size: 24px;}
     .info-left .lbox-1 p {font-size: 16px;}
     .info-left .lbox-2 p {font-size: 14px;}
+
 }
 
 @media all and (max-width: 375px) {
     .title-box h2 {font-size: 30px;}
     .title-box h2 div span {min-width: 10px;}
+
+    .portfolio_item .tit-box .project-title {font-size: 20px;}
+    .portfolio_item .tit-box .project-type {font-size: 15px;}
+    .portfolio_item .tit-box .project-type span {display: block;}
 }
