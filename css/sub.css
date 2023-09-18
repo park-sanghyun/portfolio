@@ -88,7 +88,7 @@ div.portfolio_list {display: block; text-align: center;}
 .info-left .lbox-1 a {display: inline-block; color: #fff; font-size: 54px; transition: .5s; font-weight: 500; transform: scale(1);}
 .info-left .lbox-1 a:hover {color: #b4d5ff; transform: scale(.95);}
 
-.info-left .lbox-2 p {color: #c0dcff; font-weight: bold; line-height: 1.7;}
+.info-left .lbox-2 p {color: #c0dcff; font-weight: bold; line-height: 1.7; word-break: keep-all;}
 
 
 /*media query*/
