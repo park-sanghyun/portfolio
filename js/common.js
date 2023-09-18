@@ -32,7 +32,7 @@
 
         
 
-        if(window.location.pathname == '/portfolio.html'){
+        if(window.location.pathname == '/portfolio/portfolio.html'){
             if(offsetTop > 0){
                 $("#header_Wrap").addClass("scroll")
             } else {
