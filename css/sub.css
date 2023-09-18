@@ -8,6 +8,7 @@
 .title-box h2 div { display: block;}
 .title-box h2 div span { display: inline-block; min-width: 20px; font-weight: bold; opacity: 0; transform: translate(50px, 0);}
 .title-box p { font-size: 20px; line-height: 1.7; opacity: 0; transform: translate(0, 10px);}
+.title-box p.show {opacity: 1; transition: .4s .4s; transform: translate(0, 0px); }
 
 .project-area { display: flex; max-width: 1400px; flex-direction: row; flex-wrap: wrap; margin: 0 auto; position: relative; /*height: 100%;*/ min-height: 638px; }
 .project-area > p { font-size: 60px; font-weight: 600; line-height: 1; margin-bottom: 100px;}

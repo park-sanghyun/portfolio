@@ -5,7 +5,7 @@
         if(window.location.pathname == '/portfolio/portfolio.html'){
             let tl = gsap.timeline();
             tl.to(".title-box h2 div span",{opacity: 1, x:0, stagger: 0.05, duration: 0.4}, "-=0.2")
-            tl.to(".title-box p",{opacity: 1, y:0, duration: 0.4, stagger: 0.05})
+            $(".title-box p").addClass("show")
         }
 
     })
